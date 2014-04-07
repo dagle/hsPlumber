@@ -1,0 +1,35 @@
+name: hermite
+version: 0.0.1
+synopsis: Send and receive messages through plumber
+license: BSD3
+license-file: LICENSE
+author: Per Odlund
+maintainer: per.odlund@gmail.com
+category: System
+build-type: Simple
+cabal-version: >=1.10
+homepage: http://github.com/dagle/hsPlumber
+data-files: 
+extra-source-files: README.md,
+                    hermite.hs.example
+
+description:
+    Send and receive messages through the plan9 plumber service. 
+
+library
+  default-language: Haskell2010
+  build-depends: base > 3 && < 5, utf8-string, unix 
+  hs-source-dirs: src
+  pkgconfig-depends: gtk+-2.0
+  exposed-modules:  System.Hermite,
+  other-modules:
+
+  c-sources:
+
+  ghc-options: -Wall -funbox-strict-fields
+  ghc-prof-options: -auto-all
+
+
+source-repository head
+  type: git
+  location: git://github.com/dagle/hsPlumber.git
